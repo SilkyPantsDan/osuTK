@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generator.Bind", "src\Generator.Bind\Generator.Bind.csproj", "{31D19132-0000-0000-0000-000000000000}"
 EndProject
@@ -19,25 +19,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{F1A570
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{5EEEC96B-BD2F-45B0-935D-19E9E6D7D969}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		build.fsx = build.fsx
 		README.md = README.md
 		RELEASE_NOTES.md = RELEASE_NOTES.md
-		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osuTK.NS20", "src\osuTK\osuTK.NS20.csproj", "{71896DEF-4479-4264-A3C2-706AC824FB16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osuTK.NS20", "src\osuTK\osuTK.NS20.csproj", "{71896DEF-4479-4264-A3C2-706AC824FB16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osuTK.Android", "src\osuTK.Android\osuTK.Android.csproj", "{ADAE6EC9-5E86-4922-AC09-90F7CE8008A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osuTK.Android", "src\osuTK.Android\osuTK.Android.csproj", "{ADAE6EC9-5E86-4922-AC09-90F7CE8008A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osuTK.iOS", "src\osuTK.iOS\osuTK.iOS.csproj", "{41D0EF74-194E-4B0B-910D-440A7A38DFBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "osuTK.iOS", "src\osuTK.iOS\osuTK.iOS.csproj", "{41D0EF74-194E-4B0B-910D-440A7A38DFBD}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "osuTK.Tests", "tests\osuTK.Tests\osuTK.Tests.fsproj", "{B224D67F-5AD9-40EF-8A86-39EF77918E55}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "osuTK.Tests", "tests\osuTK.Tests\osuTK.Tests.fsproj", "{6801C263-ADDA-4A7B-979D-649BCB5A1DF7}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "osuTK.Tests.Integration", "tests\osuTK.Tests.Integration\osuTK.Tests.Integration.fsproj", "{3054D936-0E95-47D7-A71D-EC984B6C1420}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "osuTK.Tests.Integration", "tests\osuTK.Tests.Integration\osuTK.Tests.Integration.fsproj", "{522D9279-3ED6-475F-867A-6AE69A53C24A}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "osuTK.Tests.Math", "tests\osuTK.Tests.Math\osuTK.Tests.Math.csproj", "{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osuTK.Tests.Math", "tests\osuTK.Tests.Math\osuTK.Tests.Math.csproj", "{C2B07CD9-B388-4FC3-AF31-C648F7EA904E}"
 EndProject
-Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "osuTK.Tests.Generators", "tests\osuTK.Tests.Generators\osuTK.Tests.Generators.fsproj", "{17538280-A5BE-4973-8714-8F97A464E518}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "osuTK.Tests.Generators", "tests\osuTK.Tests.Generators\osuTK.Tests.Generators.fsproj", "{2B11AAEB-D8AC-4356-938F-532D720E0C30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,38 +69,33 @@ Global
 		{41D0EF74-194E-4B0B-910D-440A7A38DFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41D0EF74-194E-4B0B-910D-440A7A38DFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41D0EF74-194E-4B0B-910D-440A7A38DFBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B224D67F-5AD9-40EF-8A86-39EF77918E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B224D67F-5AD9-40EF-8A86-39EF77918E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B224D67F-5AD9-40EF-8A86-39EF77918E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B224D67F-5AD9-40EF-8A86-39EF77918E55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3054D936-0E95-47D7-A71D-EC984B6C1420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3054D936-0E95-47D7-A71D-EC984B6C1420}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3054D936-0E95-47D7-A71D-EC984B6C1420}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3054D936-0E95-47D7-A71D-EC984B6C1420}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17538280-A5BE-4973-8714-8F97A464E518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17538280-A5BE-4973-8714-8F97A464E518}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17538280-A5BE-4973-8714-8F97A464E518}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17538280-A5BE-4973-8714-8F97A464E518}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79F16DF9-0C9F-46DC-B83D-F9D8A28F1C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79F16DF9-0C9F-46DC-B83D-F9D8A28F1C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79F16DF9-0C9F-46DC-B83D-F9D8A28F1C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79F16DF9-0C9F-46DC-B83D-F9D8A28F1C2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23110598-EB45-4D97-899E-647735A660CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23110598-EB45-4D97-899E-647735A660CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23110598-EB45-4D97-899E-647735A660CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23110598-EB45-4D97-899E-647735A660CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6801C263-ADDA-4A7B-979D-649BCB5A1DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6801C263-ADDA-4A7B-979D-649BCB5A1DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6801C263-ADDA-4A7B-979D-649BCB5A1DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6801C263-ADDA-4A7B-979D-649BCB5A1DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522D9279-3ED6-475F-867A-6AE69A53C24A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522D9279-3ED6-475F-867A-6AE69A53C24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522D9279-3ED6-475F-867A-6AE69A53C24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522D9279-3ED6-475F-867A-6AE69A53C24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B07CD9-B388-4FC3-AF31-C648F7EA904E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B07CD9-B388-4FC3-AF31-C648F7EA904E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B07CD9-B388-4FC3-AF31-C648F7EA904E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B07CD9-B388-4FC3-AF31-C648F7EA904E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B11AAEB-D8AC-4356-938F-532D720E0C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B11AAEB-D8AC-4356-938F-532D720E0C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B11AAEB-D8AC-4356-938F-532D720E0C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B11AAEB-D8AC-4356-938F-532D720E0C30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B224D67F-5AD9-40EF-8A86-39EF77918E55} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
-		{3054D936-0E95-47D7-A71D-EC984B6C1420} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
-		{BCE02464-86F5-4A78-9B9B-7C8E3D27CAC1} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
-		{17538280-A5BE-4973-8714-8F97A464E518} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
+		{6801C263-ADDA-4A7B-979D-649BCB5A1DF7} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
+		{522D9279-3ED6-475F-867A-6AE69A53C24A} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
+		{C2B07CD9-B388-4FC3-AF31-C648F7EA904E} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
+		{2B11AAEB-D8AC-4356-938F-532D720E0C30} = {1857BB8E-1A35-4EBF-9F6D-685F11DC025B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AD59567-7745-4290-A1DA-CA5E5021E505}
 	EndGlobalSection
 EndGlobal
