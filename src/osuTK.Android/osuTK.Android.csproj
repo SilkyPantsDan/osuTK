@@ -12,6 +12,7 @@
     <DefineConstants>TRACE;DEBUG;OPENTK_1</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Old\**" />

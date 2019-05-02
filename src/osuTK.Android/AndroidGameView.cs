@@ -33,12 +33,14 @@ using ES20 = osuTK.Graphics.ES20;
 namespace osuTK.Platform.Android
 {
 
-#if OPENTK_0
-	[Register ("opentk/platform/android/AndroidGameView")]
-#else
-	[Register ("opentk_1_0/platform/android/AndroidGameView")]
-#endif
-	public partial class AndroidGameView : GameViewBase, ISurfaceHolderCallback
+    //#if OPENTK_0
+    //	[Register ("opentk/platform/android/AndroidGameView")]
+    //#else
+    //	[Register ("opentk_1_0/platform/android/AndroidGameView")]
+    //#endif
+
+    [Register("osutk/platform/android/AndroidGameView")]
+    public partial class AndroidGameView : GameViewBase, ISurfaceHolderCallback
 	{
 		bool disposed;
 		System.Timers.Timer timer;

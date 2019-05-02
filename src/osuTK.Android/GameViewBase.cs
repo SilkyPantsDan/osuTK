@@ -27,15 +27,17 @@ using All = osuTK.Graphics.ES11.All;
 using ES11 = osuTK.Graphics.ES11;
 using ES20 = osuTK.Graphics.ES20;
 using osuTK.Input;
+using Android.App;
 
 namespace osuTK
 {
-	#if OPENTK_0
-		[Register ("opentk/GameViewBase")]
-	#else
-		[Register ("opentk_1_0/GameViewBase")]
-	#endif
-	public abstract class GameViewBase : SurfaceView, IGameWindow
+//	#if OPENTK_0
+//		[Register ("opentk/GameViewBase")]
+//	#else
+//		[Register ("opentk_1_0/GameViewBase")]
+//#endif
+    [Register("opentk_1_1/GameViewBase")]
+    public abstract class GameViewBase : SurfaceView, IGameWindow
 	{
 		[Register (".ctor", "(Landroid/content/Context;)V", "")]
 		public GameViewBase (Context context) : base (context)
@@ -864,27 +866,21 @@ namespace osuTK
 			set;
 		}
 
-		/// <summary>This member is not supported.</summary>
-		/// <remarks>
-		///   <para>
-		///     Throws a <see cref="T:System.NotSupportedException" />.
-		///   </para>
-		/// </remarks>
-		public event EventHandler<EventArgs> MouseEnter {
-			add { throw new NotSupportedException (); }
-			remove { throw new NotSupportedException (); }
-		}
+        /// <summary>This member is not supported.</summary>
+        /// <remarks>
+        ///   <para>
+        ///     Throws a <see cref="T:System.NotSupportedException" />.
+        ///   </para>
+        /// </remarks>
+        public event EventHandler<EventArgs> MouseEnter;
 
-		/// <summary>This member is not supported.</summary>
-		/// <remarks>
-		///   <para>
-		///     Throws a <see cref="T:System.NotSupportedException" />.
-		///   </para>
-		/// </remarks>
-		public event EventHandler<EventArgs> MouseLeave {
-			add { throw new NotSupportedException (); }
-			remove { throw new NotSupportedException (); }
-		}
+        /// <summary>This member is not supported.</summary>
+        /// <remarks>
+        ///   <para>
+        ///     Throws a <see cref="T:System.NotSupportedException" />.
+        ///   </para>
+        /// </remarks>
+        public event EventHandler<EventArgs> MouseLeave;
 
 		/// <summary>This member is not supported.</summary>
 		/// <remarks>
@@ -908,13 +904,15 @@ namespace osuTK
 		}
 
 		public string Title {
-			get {
-				throw new NotImplementedException ();
-			}
-			set {
-				throw new NotImplementedException ();
-			}
-		}
+            get {
+                Activity activity = (Activity)Context;
+                return activity.Title;
+            }
+            set {
+                Activity activity = (Activity)Context;
+                activity.Window.SetTitle(value);
+            }
+        }
 
 		/// <summary>This member is not supported.</summary>
 		/// <value>To be added.</value>
@@ -1119,13 +1117,11 @@ namespace osuTK
 		///   </para>
 		/// </remarks>
 		public Rectangle ClientRectangle {
-			get {
-				throw new NotSupportedException ();
-			}
-			set {
-				throw new NotSupportedException ();
-			}
-		}
+            get => new Rectangle(0, 0, Width, Height);
+            set {
+                throw new NotSupportedException();
+            }
+        }
 
 		/// <summary>This member is not supported.</summary>
 		/// <value>To be added.</value>
@@ -1135,18 +1131,58 @@ namespace osuTK
 		///   </para>
 		/// </remarks>
 		public Size ClientSize {
-			get {
+            get => new Size(Width, Height);
+            set {
 				throw new NotSupportedException ();
 			}
-			set {
-				throw new NotSupportedException ();
-			}
-		}
+        }
 
-        public Icon Icon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public MouseCursor Cursor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool CursorVisible { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool CursorGrabbed { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public MouseCursor Cursor {
+            get;
+            set;
+        }
+
+        public bool CursorVisible {
+            get;
+            set;
+        }
+
+        public Icon Icon {
+            get { throw new NotSupportedException(); }
+            set { throw new NotSupportedException(); }
+        }
+
+        public bool CursorGrabbed { get => true; set { } }
+
+        event EventHandler<EventArgs> INativeWindow.IconChanged {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
+
+        event EventHandler<MouseButtonEventArgs> INativeWindow.MouseDown {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
+
+        event EventHandler<MouseMoveEventArgs> INativeWindow.MouseMove {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
+
+        event EventHandler<MouseButtonEventArgs> INativeWindow.MouseUp {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
+
+        event EventHandler<MouseWheelEventArgs> INativeWindow.MouseWheel {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
+
+        event EventHandler<FileDropEventArgs> INativeWindow.FileDrop {
+            add { throw new NotSupportedException(); }
+            remove { throw new NotSupportedException(); }
+        }
 
 #if OPENTK_1
         //public osuTK.Input.IInputDriver InputDriver {
