@@ -128,24 +128,24 @@ namespace osuTK.Graphics
         /// <summary>
         /// Gets an osuTK.Graphics.ColorFormat that describes the color format for this GraphicsFormat.
         /// </summary>
-        public ColorFormat ColorFormat { get; private set; }
+        public ColorFormat ColorFormat { get; protected set; }
 
         /// <summary>
         /// Gets an osuTK.Graphics.ColorFormat that describes the accumulator format for this GraphicsFormat.
         /// </summary>
-        public ColorFormat AccumulatorFormat { get; private set; }
+        public ColorFormat AccumulatorFormat { get; protected set; }
 
         /// <summary>
         /// Gets a System.Int32 that contains the bits per pixel for the depth buffer
         /// for this GraphicsFormat.
         /// </summary>
-        public int Depth { get; private set; }
+        public int Depth { get; protected set; }
 
         /// <summary>
         /// Gets a System.Int32 that contains the bits per pixel for the stencil buffer
         /// of this GraphicsFormat.
         /// </summary>
-        public int Stencil { get; private set; }
+        public int Stencil { get; protected set; }
 
         /// <summary>
         /// Gets a System.Int32 that contains the number of FSAA samples per pixel for this GraphicsFormat.
@@ -156,7 +156,7 @@ namespace osuTK.Graphics
             {
                 return samples;
             }
-            private set
+            protected set
             {
                 // Clamp antialiasing samples to max 64x
                 // This protects against a potential DOS during
@@ -169,13 +169,13 @@ namespace osuTK.Graphics
         /// <summary>
         /// Gets a System.Boolean indicating whether this DisplayMode is stereoscopic.
         /// </summary>
-        public bool Stereo { get; private set; }
+        public bool Stereo { get; protected set; }
 
         /// <summary>
         /// Gets a System.Int32 containing the number of buffers associated with this
         /// DisplayMode.
         /// </summary>
-        public int Buffers { get; private set; }
+        public int Buffers { get; protected set; }
 
         /// <summary>Returns an osuTK.GraphicsFormat compatible with the underlying platform.</summary>
         public static GraphicsMode Default
